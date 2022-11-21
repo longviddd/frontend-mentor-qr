@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compile-sass": "sass app.scss app.css --no-source-map --watch"
+    "compile-sass": "sass src/app.scss src/app.css --no-source-map --watch"
   },
   "eslintConfig": {
     "extends": [
