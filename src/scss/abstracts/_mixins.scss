@@ -1,0 +1,33 @@
+@use "variables" as *;
+@use "sass:math";
+@mixin position($name, $top, $right, $bottom, $left) {
+  position: $name;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin flexBox($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+@mixin columns($key) {
+  @for $i from 1 through 12 {
+    .col-#{$key}-#{$i} {
+      flex-basis: math.div(100%, 12) * $i;
+      max-width: math.div(100%, 12) * $i;
+    }
+  }
+}
+@mixin responsive($screen) {
+  @if $screen == mobile {
+    @media (max-width: map-get($breakPoints, "mobile")) {
+      @content;
+    }
+  } @else if $screen == desktop {
+    @media (max-width: map-get($breakPoints, "desktop")) {
+      @content;
+    }
+  }
+}

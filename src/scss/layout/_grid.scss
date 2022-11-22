@@ -1,0 +1,30 @@
+@use "../abstracts/index" as *;
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+  @include flexBox(center, center);
+  height: 100vh;
+  @include responsive(mobile) {
+    padding-left: $gutter + 1rem;
+    padding-right: $gutter + 1rem;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+.row > * {
+  padding: $gutter;
+}
+@each $key, $value in $breakPoints {
+  @media (max-width: $value) {
+    @include columns($key);
+  }
+}

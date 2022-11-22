@@ -1,0 +1,43 @@
+@use "../abstracts/" as *;
+.card {
+  border-radius: 25px;
+  @include responsive(desktop) {
+    width: 19%;
+    height: 80%;
+  }
+  @include responsive(mobile) {
+    width: 95%;
+    height: 75vh;
+  }
+  padding-top: 10px;
+
+  background-color: white;
+
+  &__qr-image {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+    height: 60%;
+    border-radius: 25px;
+  }
+  &__header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  &__text {
+    font-size: 13px;
+    color: $light-gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

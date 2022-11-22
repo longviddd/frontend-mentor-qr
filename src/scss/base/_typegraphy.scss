@@ -1,7 +1,9 @@
+@use "../abstracts/index" as *;
 html {
   font-size: 15px;
 }
 body {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
+  background-color: $light-gray;
 }

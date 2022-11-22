@@ -1,3 +1,8 @@
 // import base modules
 @use "scss/base/reset";
 @use "scss/base//typegraphy";
+@use "scss/abstracts/index";
+@use "scss/layout/grid";
+@use "scss/components/components";
+@use "scss/utils/utils";
+
